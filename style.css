@@ -11,7 +11,7 @@
 }
 
 #heading {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 600;
   text-align: center;
   color: #1c1c1c;
@@ -43,6 +43,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .card-content {
@@ -104,12 +105,16 @@
 }
 
 @media only screen and (max-width: 576px) {
+  #title {
+    font-size: 2.5rem;
+  }
+
   #card-container {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .card {
-    width: 95%;
+    width: 99%;
     margin: auto;
   }
 }
@@ -121,13 +126,11 @@
   }
 
   #card-container {
-    width: 90%;
-    margin: auto;
     grid-template-columns: repeat(1, 1fr);
   }
 
   .card {
-    width: 95%;
+    width: 99%;
     margin: auto;
   }
 }
