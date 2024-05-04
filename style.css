@@ -9,3 +9,94 @@
   font-family: "Gotham";
   src: url("./font/GothamBook.ttf");
 }
+
+#heading {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  color: #1c1c1c;
+  margin-top: 65px;
+}
+
+#heading span {
+  color: #114a8d;
+}
+
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.card {
+  width: 520px;
+  height: 348px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) -10%,
+    rgba(0, 0, 0, 0.59) 48.08%,
+    rgb(0, 0, 0) 100.001%
+  );
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+}
+
+.highlight-text {
+  color: #ffc758;
+}
+
+.overlay-content {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: rgba(17, 74, 141, 0.6);
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 100%;
+  bottom: 18px;
+  padding: 73px 43px;
+  transition: top 0.5s ease, right 0.5s ease;
+}
+
+.description {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.card:hover .overlay-content {
+  opacity: 1;
+  top: 0;
+  right: 0;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
